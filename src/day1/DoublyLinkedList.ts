@@ -6,8 +6,8 @@ type Node<T> = {
 
 export default class SinglyLinkedList<T> {
     public length: number;
-    public head: Node<T> | undefined;
-    public tail: Node<T> | undefined;
+    private head: Node<T> | undefined;
+    private tail: Node<T> | undefined;
 
     constructor() {
         this.head = this.tail = undefined;
