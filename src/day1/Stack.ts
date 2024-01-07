@@ -21,20 +21,21 @@ export default class Stack<T> {
             return;
         }
 
-        const head = this.head;
+        node.next = this.head;
         this.head = node;
-        this.head.next = head;
     }
+
     pop(): T | undefined {
         if (!this.head) return;
 
         this.length--;
 
         const head = this.head;
-        this.head = this.head.next;
+        this.head = head.next;
 
         return head?.value;
     }
+
     peek(): T | undefined {
         return this.head?.value;
     }
