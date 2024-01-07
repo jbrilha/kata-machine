@@ -1,5 +1,3 @@
-// import { isTemplateMiddle } from "typescript";
-
 type Node<T> = {
     value: T;
     next?: Node<T>;
